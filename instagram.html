@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram Clone</title>
+  <style>
+    @font-face {
+      font-family: 'Billabong';
+      src: url('Billabong.otf') format('opentype');
+      /* path सही देना */
+    }
+
+    .billabong-text {
+      font-family: 'Billabong', cursive;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      /* 🔧 Page background color */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      gap: 40px;
+    }
+
+    /* 📱 Phone Preview */
+    .phone-preview {
+      width: 380px;
+      /* 🔧 Phone image width */
+      height: 580px;
+      /* 🔧 Phone image height */
+      background: url('phone.png') no-repeat center center/cover;
+      /* 🔧 Border around phone */
+      /* 🔧 Rounded corners */
+
+      transform: translate(0px, 0px);
+      /* 🔧 Move phone */
+    }
+
+    /* 📦 Login Box */
+    .login-box {
+      width: 350px;
+      padding: 30px;
+      position: relative;
+      top: 0px;
+      /* 🔧 Move box up/down */
+      left: 0px;
+      /* 🔧 Move box left/right */
+      border: 1px solid #bebebe;
+      /* 🔧 Border color and thickness *
+      transform: translate(0px, 0px);   /* 🔧 Extra move */
+      text-align: center;
+    }
+
+    /* 🔠 Instagram Logo Text */
+    .login-box h1 {
+      font-family: 'Billabong', cursive;
+      font-size: 48px;
+      /* 🔧 Font size */
+      color: #000000;
+      /* 🔧 Font color */
+      margin-bottom: 20px;
+    }
+
+    /* 📝 Input Fields */
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      background: #fafafa;
+      border: 1px solid #dbdbdb;
+      /* 🔧 Input border */
+
+      font-size: 14px;
+      color: #333;
+      /* 🔧 Text color */
+      transform: translate(0, 0);
+      /* 🔧 Move inputs */
+    }
+
+    .logo-img {
+      position: absolute;
+      /* or relative/fixed */
+      top: 64px;
+      /* ऊपर से 50px नीचे */
+      left: 486px;
+      /* बाएँ से 100px दूर */
+      width: 230px;
+      /* Size भी control */
+    }
+
+
+    /* 🔘 Button Style */
+    button {
+      width: 100%;
+      background-color: #52acf5;
+      /* 🔧 Button background */
+      color: white;
+      border: none;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 8px;
+      /* 🔧 Button corners */
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transform: translate(0, 0);
+      /* 🔧 Move button */
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #3c90c7;
+      /* 🔧 Hover color */
+    }
+
+    /* 🔘 OR Line */
+    .or {
+      margin: 20px 0;
+      position: relative;
+      color: #8e8e8e;
+      font-weight: bold;
+    }
+
+    .or::before,
+    .or::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 40%;
+      background: #dbdbdb;
+      top: 50%;
+    }
+
+    .or::before {
+      left: 0;
+    }
+
+    .or::after {
+      right: 0;
+    }
+
+    /* 🔵 Facebook login */
+    .facebook-login {
+      color: #2d98d6;
+      /* 🔧 Facebook text */
+
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 10px;
+      transform: translate(0, 0);
+      /* 🔧 Move text */
+    }
+
+    /* 🔁 Forgot Password */
+    .login-box p a {
+      color: #173075;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    /* 🆕 Sign Up box */
+    .signup {
+      margin-top: 10px;
+      border: 1px solid #dbdbdb;
+      padding: 20px;
+      background-color: white;
+      font-size: 14px;
+    }
+
+    .signup a {
+      color: #0095f6;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="phone-preview"></div>
+
+    <div>
+      <div class="login-box">
+        <h1 class="billabong-text">Instagram</h1>
+        <input type="text" placeholder="Phone number, username, or email" />
+        <input type="password" placeholder="Password" />
+        <button>Log in</button>
+        <div class="or">OR</div>
+        <a href="#" class="facebook-login"><b>Log in with Facebook</b></a>
+        <p><a href="#">Forgot password?</a></p>
+      </div>
+
+      <div class="signup">
+        <p>Don't have an account? <a href="#"><b>Sign up</b></a></p>
+
+        <img src="insta.pg.PNG" alt="insta" class="logo-img">
+
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
